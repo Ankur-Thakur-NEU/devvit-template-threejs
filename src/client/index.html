@@ -15,21 +15,70 @@
   </head>
   <body>
     <canvas id="bg"></canvas>
-    <div class="overlay">
-      <h1 class="title" id="title"></h1>
-      <p class="description">Edit <span class="code">src/client/main.ts</span> to get started.</p>
-      <div class="counter-row">
-        <!-- Counter buttons removed. Value updated programmatically. -->
-        <span class="counter-value" id="counter-value">0</span>
+
+    <!-- Game Header -->
+    <header class="game-header">
+      <div class="header-content">
+        <h1 class="title" id="title">🏏 Cricket Batting Game</h1>
+        <button class="play-button" id="play-button">Play</button>
       </div>
-      <footer class="footer">
-        <div class="docs-link" tabindex="0" id="docs-link">Docs</div>
-        <span class="divider">|</span>
-        <div class="docs-link" tabindex="0" id="playtest-link">r/Devvit</div>
-        <span class="divider">|</span>
-        <div class="docs-link" tabindex="0" id="discord-link">Discord</div>
-      </footer>
+    </header>
+
+    <!-- Game Stats - Top Right -->
+    <div class="game-stats">
+      <div class="stat-card">
+        <div class="stat-label">Score</div>
+        <div class="stat-value" id="score">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Balls</div>
+        <div class="stat-value" id="balls-faced">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Sixes</div>
+        <div class="stat-value" id="sixes">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Balls Left</div>
+        <div class="stat-value" id="balls-left">6</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Boosters</div>
+        <div class="stat-value" id="boosters">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Status</div>
+        <div class="stat-value" id="game-status">Ready</div>
+      </div>
     </div>
+
+    <!-- Welcome Message - Center -->
+    <div class="welcome-message" id="welcome-message">
+      <div class="welcome-content">
+        <p class="welcome-text">🎯 Perfect your timing and hit those sixes!</p>
+        <p class="subtitle" id="subtitle">Tap Play to start batting...</p>
+      </div>
+    </div>
+
+    <!-- Game Instructions - Bottom Center -->
+    <div class="game-instructions">
+      <p class="instruction-text" id="instruction">🎯 Get ready! Tap/click to swing.</p>
+      <div class="controls-hint">
+        <span class="control-key">Tap/Space</span> to swing the bat
+      </div>
+      <button class="test-button" id="test-button">Test Swing</button>
+    </div>
+
+    <!-- Game Footer -->
+    <footer class="footer">
+      <div class="docs-link" tabindex="0" id="docs-link">How to Play</div>
+      <span class="divider">|</span>
+      <div class="docs-link" tabindex="0" id="leaderboard-link">Leaderboard</div>
+      <span class="divider">|</span>
+      <div class="docs-link" tabindex="0" id="stats-link">Stats</div>
+      <span class="divider">|</span>
+      <div class="docs-link" tabindex="0" id="discord-link">Community</div>
+    </footer>
     <script type="module" src="main.ts" defer></script>
   </body>
 </html>
